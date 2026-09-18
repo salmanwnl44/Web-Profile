@@ -1,0 +1,184 @@
+/* ==========================================================================
+   MINIMALIST MONOCHROME GLITCH SYSTEM
+   Strictly Black & White, Razor-Thin Slices, Digital Displacements
+   ========================================================================== */
+
+/* Film Grain Overlay Canvas */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: var(--z-grain);
+  opacity: 0.055;
+  transition: opacity var(--transition-smooth);
+}
+
+body:not(.grain-enabled) .grain-overlay {
+  opacity: 0;
+}
+
+/* Monochromatic Slice Glitch Effect on Text */
+.glitch-text {
+  position: relative;
+  display: inline-block;
+  color: var(--text-primary);
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-primary);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Hover-triggered subtle slice displacement - runs ONCE briefly (no continuous loop) */
+.glitch-text:hover::before,
+.glitch-active::before {
+  opacity: 0.8;
+  left: -2px;
+  text-shadow: 1px 0 #ffffff;
+  animation: glitch-slice-1 0.2s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+}
+
+.glitch-text:hover::after,
+.glitch-active::after {
+  opacity: 0.8;
+  left: 2px;
+  text-shadow: -1px 0 #888888;
+  animation: glitch-slice-2 0.2s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+}
+
+@keyframes glitch-slice-1 {
+  0% {
+    clip-path: inset(18% 0 72% 0);
+    transform: translate(-3px, 1px);
+  }
+  20% {
+    clip-path: inset(62% 0 14% 0);
+    transform: translate(2px, -1px);
+  }
+  40% {
+    clip-path: inset(30% 0 45% 0);
+    transform: translate(-2px, 0);
+  }
+  60% {
+    clip-path: inset(80% 0 5% 0);
+    transform: translate(3px, 1px);
+  }
+  80% {
+    clip-path: inset(12% 0 68% 0);
+    transform: translate(-1px, -2px);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes glitch-slice-2 {
+  0% {
+    clip-path: inset(40% 0 42% 0);
+    transform: translate(3px, -1px);
+    opacity: 0.8;
+  }
+  25% {
+    clip-path: inset(10% 0 78% 0);
+    transform: translate(-2px, 2px);
+  }
+  50% {
+    clip-path: inset(75% 0 12% 0);
+    transform: translate(2px, 0);
+  }
+  75% {
+    clip-path: inset(25% 0 60% 0);
+    transform: translate(-3px, -1px);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+
+/* Micro-glitch on Card / Button Hover */
+.glitch-border {
+  position: relative;
+}
+
+.glitch-border::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border: 1px solid var(--border-active);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+}
+
+.glitch-border:hover::after {
+  opacity: 1;
+  animation: border-flicker 0.25s steps(2, start) 2;
+}
+
+@keyframes border-flicker {
+  0% { opacity: 0; transform: translate(1px, 0); }
+  50% { opacity: 1; transform: translate(-1px, 0); }
+  100% { opacity: 1; transform: translate(0, 0); }
+}
+
+/* CRT Scanline Indicator (applied selectively to cards & headers) */
+.scanlines {
+  position: relative;
+  overflow: hidden;
+}
+
+.scanlines::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.35) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+  z-index: 2;
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* Digital Noise Ticker */
+.glitch-pulse {
+  animation: micro-pulse 4s infinite ease-in-out;
+}
+
+@keyframes micro-pulse {
+  0%, 92%, 100% {
+    opacity: 1;
+    transform: none;
+  }
+  93% {
+    opacity: 0.65;
+    transform: translate(-1px, 1px);
+  }
+  94% {
+    opacity: 1;
+    transform: none;
+  }
+  95% {
+    opacity: 0.75;
+    transform: translate(2px, -1px);
+  }
+  96% {
+    opacity: 1;
+    transform: none;
+  }
+}
