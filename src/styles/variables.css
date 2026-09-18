@@ -14,6 +14,9 @@
   --border-strong: rgba(255, 255, 255, 0.35);
   --border-active: #ffffff;
 
+  --bg-hover: rgba(255, 255, 255, 0.04);
+  --bg-hover-strong: rgba(255, 255, 255, 0.08);
+
   /* Typography Stacks */
   --font-display: 'Syne', sans-serif;
   --font-sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -45,19 +48,22 @@
   --z-modal: 800;
 }
 
-/* Optional Light/High-Contrast Mode (for toggling while maintaining exaggerated minimalism) */
+/* Light / High-Contrast White Theme (Default is Dark) */
 body.theme-light {
-  --bg-primary: #f5f5f5;
-  --bg-secondary: #ececec;
-  --bg-surface: #e4e4e4;
-  --bg-glass: rgba(245, 245, 245, 0.88);
+  --bg-primary: #f6f6f6;
+  --bg-secondary: #eeeeee;
+  --bg-surface: #e6e6e6;
+  --bg-glass: rgba(246, 246, 246, 0.9);
 
   --text-primary: #0a0a0a;
   --text-secondary: #4a4a4a;
-  --text-muted: #8a8a8a;
+  --text-muted: #828282;
   --text-inverse: #ffffff;
 
   --border-subtle: rgba(0, 0, 0, 0.12);
   --border-strong: rgba(0, 0, 0, 0.35);
   --border-active: #0a0a0a;
+
+  --bg-hover: rgba(0, 0, 0, 0.04);
+  --bg-hover-strong: rgba(0, 0, 0, 0.08);
 }

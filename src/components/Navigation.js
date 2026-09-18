@@ -54,10 +54,13 @@ export function renderHeader() {
           </ul>
         </nav>
 
-        <!-- System Controls: Sound & Navigation -->
+        <!-- System Controls: Sound & Theme -->
         <div class="header-controls">
           <button id="sound-toggle-btn" class="control-btn" title="Toggle Mechanical Audio FX">
             <span id="sound-state-label">[ AUDIO: ON ]</span>
+          </button>
+          <button id="theme-toggle-btn" class="control-btn" title="Toggle White / Dark Theme">
+            <span id="theme-state-label">[ THEME: DARK ]</span>
           </button>
           <button id="mobile-nav-toggle" class="mobile-toggle" aria-label="Toggle menu">
             <span>[ MENU ]</span>
@@ -136,6 +139,36 @@ export function initNavigationHandlers() {
     });
   }
 
+
+  // Theme Toggle (Dark is default)
+  const themeBtn = document.getElementById('theme-toggle-btn');
+  const themeLabel = document.getElementById('theme-state-label');
+
+  const applyTheme = (isLight) => {
+    if (isLight) {
+      document.body.classList.remove('theme-dark');
+      document.body.classList.add('theme-light');
+      if (themeLabel) themeLabel.innerText = '[ THEME: WHITE ]';
+    } else {
+      document.body.classList.remove('theme-light');
+      document.body.classList.add('theme-dark');
+      if (themeLabel) themeLabel.innerText = '[ THEME: DARK ]';
+    }
+  };
+
+  // Restore user saved choice; default to dark if not set
+  const currentSavedTheme = localStorage.getItem('profile-theme') || 'dark';
+  applyTheme(currentSavedTheme === 'light');
+
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      const isCurrentlyLight = document.body.classList.contains('theme-light');
+      const nextIsLight = !isCurrentlyLight;
+      applyTheme(nextIsLight);
+      localStorage.setItem('profile-theme', nextIsLight ? 'light' : 'dark');
+      sound.playClick();
+    });
+  }
 
   // Mobile Menu Toggle
   const mobileBtn = document.getElementById('mobile-nav-toggle');

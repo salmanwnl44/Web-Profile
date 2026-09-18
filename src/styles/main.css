@@ -45,7 +45,7 @@ body {
   left: 0;
   width: 32px;
   height: 32px;
-  border: 1px solid var(--text-primary);
+  border: 1px solid #ffffff;
   border-radius: 50%;
   pointer-events: none;
   z-index: var(--z-cursor);
@@ -60,7 +60,7 @@ body {
   left: 0;
   width: 4px;
   height: 4px;
-  background-color: var(--text-primary);
+  background-color: #ffffff;
   border-radius: 50%;
   pointer-events: none;
   z-index: var(--z-cursor);
@@ -73,8 +73,8 @@ body {
   width: 36px;
   height: 36px;
   background-color: transparent;
-  border: 1px solid var(--text-primary);
-  opacity: 0.6;
+  border: 1px solid #ffffff;
+  opacity: 0.7;
 }
 
 /* Swiss 4-Column Architectural Grid Overlay */
@@ -250,7 +250,7 @@ body {
 .nav-link:hover,
 .nav-link.active {
   color: var(--text-primary);
-  background-color: rgba(255, 255, 255, 0.04);
+  background-color: var(--bg-hover);
 }
 
 .nav-link.active::after {
@@ -290,7 +290,7 @@ body {
 }
 
 .control-btn:hover {
-  background-color: rgba(255, 255, 255, 0.06);
+  background-color: var(--bg-hover-strong);
   color: var(--text-primary);
 }
 
@@ -580,7 +580,7 @@ body {
 
 .btn-outline:hover {
   border-color: var(--text-primary);
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--bg-hover-strong);
 }
 
 /* ==========================================================================
@@ -756,7 +756,7 @@ body {
 }
 
 .project-item:hover {
-  background-color: rgba(255, 255, 255, 0.02);
+  background-color: var(--bg-hover);
 }
 
 .project-item:last-child {
@@ -1537,3 +1537,73 @@ body {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
+/* ==========================================================================
+   LIGHT / WHITE THEME ADAPTATIONS
+   Exaggerated Minimalism in Crisp White / High-Contrast Editorial Style
+   ========================================================================== */
+
+/* 1. Swiss 4-Column Architectural Grid Overlay */
+body.theme-light .swiss-grid-overlay .grid-col {
+  border-left: 1px solid rgba(0, 0, 0, 0.04);
+}
+body.theme-light .swiss-grid-overlay .grid-col:last-child {
+  border-right: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* 2. Hero Outline Text & Typography */
+body.theme-light .hero-statement .outline-text {
+  -webkit-text-stroke: 1.5px rgba(10, 10, 10, 0.35);
+  color: transparent;
+}
+body.theme-light .hero-statement .outline-text:hover {
+  -webkit-text-stroke: 1.5px #0a0a0a;
+  color: #0a0a0a;
+}
+
+/* 3. Hero Background Photo & Vignette in Light Mode */
+body.theme-light .hero-bg-vignette {
+  background: radial-gradient(circle at 75% 35%, rgba(246, 246, 246, 0.2) 0%, rgba(246, 246, 246, 0.82) 55%, rgba(246, 246, 246, 0.98) 90%),
+              linear-gradient(to right, rgba(246, 246, 246, 0.98) 0%, rgba(246, 246, 246, 0.88) 45%, rgba(246, 246, 246, 0.35) 100%),
+              linear-gradient(to bottom, rgba(246, 246, 246, 0.6) 0%, transparent 25%, transparent 75%, rgba(246, 246, 246, 0.98) 100%);
+}
+
+body.theme-light .hero-bg-photo {
+  filter: grayscale(100%) blur(14px) contrast(110%) brightness(0.9);
+  opacity: 0.35;
+}
+
+body.theme-light .hero-wrapper:hover .hero-bg-photo,
+body.theme-light .hero-wrapper.hero-hovered .hero-bg-photo,
+body.theme-light .hero-bg-photo-wrap:hover .hero-bg-photo {
+  filter: grayscale(0%) blur(0px) contrast(105%) brightness(0.96);
+  opacity: 0.88;
+}
+
+/* 4. Modal Backdrop & Content */
+body.theme-light .modal-backdrop {
+  background-color: rgba(246, 246, 246, 0.92);
+}
+
+body.theme-light .modal-dialog {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+body.theme-light .code-block-minimal {
+  background: #f0f0f0;
+  color: #111111;
+  border-color: var(--border-subtle);
+}
+
+/* 5. Form Controls Focus */
+body.theme-light .form-input:focus,
+body.theme-light .form-textarea:focus,
+body.theme-light .form-select:focus {
+  background-color: #ffffff;
+}
+
+/* 6. Receipt Card Header in Light Theme */
+body.theme-light .receipt-header {
+  color: #008736;
+}
+
