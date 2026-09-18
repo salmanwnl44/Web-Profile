@@ -23,6 +23,7 @@ html {
 body {
   min-height: 100vh;
   background-color: var(--bg-primary);
+  color: var(--text-primary);
   overflow-x: hidden;
   position: relative;
   line-height: 1.5;
@@ -480,6 +481,7 @@ body {
   line-height: 0.9;
   letter-spacing: -0.05em;
   text-transform: uppercase;
+  color: var(--text-primary);
   margin-bottom: 3.5rem;
   word-break: normal;
 }
@@ -488,6 +490,7 @@ body {
   display: block;
   overflow: hidden;
   white-space: nowrap;
+  color: var(--text-primary);
 }
 
 .hero-statement .outline-text {
@@ -1021,9 +1024,19 @@ body {
   background-color: #181818;
 }
 
-.form-textarea {
-  min-height: 150px;
-  resize: vertical;
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+.form-select option {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.modal-spec-table td:last-child {
+  color: var(--text-primary);
 }
 
 /* Transmission Success Receipt */
@@ -1552,8 +1565,13 @@ body.theme-light .swiss-grid-overlay .grid-col:last-child {
 }
 
 /* 2. Hero Outline Text & Typography */
+body.theme-light .hero-statement,
+body.theme-light .hero-statement .hero-row {
+  color: #0a0a0a;
+}
+
 body.theme-light .hero-statement .outline-text {
-  -webkit-text-stroke: 1.5px rgba(10, 10, 10, 0.35);
+  -webkit-text-stroke: 1.5px rgba(10, 10, 10, 0.45);
   color: transparent;
 }
 body.theme-light .hero-statement .outline-text:hover {

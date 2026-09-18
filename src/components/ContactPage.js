@@ -42,9 +42,9 @@ export function renderContactPage() {
                 <tr>
                   <td>PRIMARY NETWORKS</td>
                   <td>
-                    <a href="${PROFILE_DATA.contact.github}" target="_blank" rel="noopener" style="color: #fff; text-decoration: underline; margin-right: 1rem;">GITHUB ↗</a>
-                    <a href="${PROFILE_DATA.contact.linkedin}" target="_blank" rel="noopener" style="color: #fff; text-decoration: underline; margin-right: 1rem;">LINKEDIN ↗</a>
-                    <a href="${PROFILE_DATA.contact.twitter}" target="_blank" rel="noopener" style="color: #fff; text-decoration: underline;">X / TWITTER ↗</a>
+                    <a href="${PROFILE_DATA.contact.github}" target="_blank" rel="noopener" style="color: var(--text-primary); text-decoration: underline; margin-right: 1rem;">GITHUB ↗</a>
+                    <a href="${PROFILE_DATA.contact.linkedin}" target="_blank" rel="noopener" style="color: var(--text-primary); text-decoration: underline; margin-right: 1rem;">LINKEDIN ↗</a>
+                    <a href="${PROFILE_DATA.contact.twitter}" target="_blank" rel="noopener" style="color: var(--text-primary); text-decoration: underline;">X / TWITTER ↗</a>
                   </td>
                 </tr>
               </tbody>
@@ -54,7 +54,7 @@ export function renderContactPage() {
             <div class="direct-email-box">
               <div>
                 <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); margin-bottom: 0.3rem;">ELECTRONIC MAIL</div>
-                <div style="font-family: var(--font-mono); font-size: 0.95rem; font-weight: 600; color: #fff;">${PROFILE_DATA.contact.email}</div>
+                <div style="font-family: var(--font-mono); font-size: 0.95rem; font-weight: 600; color: var(--text-primary);">${PROFILE_DATA.contact.email}</div>
               </div>
               <button id="copy-email-btn" class="btn-outline copy-email-btn" style="padding: 0.6rem 1rem;">
                 <span>[ COPY EMAIL ]</span>

@@ -49,6 +49,7 @@
 }
 
 /* Light / High-Contrast White Theme (Default is Dark) */
+html.theme-light,
 body.theme-light {
   --bg-primary: #f6f6f6;
   --bg-secondary: #eeeeee;

@@ -213,7 +213,7 @@ function formatMarkdownProse(md) {
         return `<h3 class="modal-section-h3">${block.replace('### ', '')}</h3>`;
       }
       if (block.startsWith('> ')) {
-        return `<blockquote style="border-left: 2px solid #ffffff; padding-left: 1.5rem; margin: 2rem 0; font-style: italic; color: #ffffff;">${block.replace('> ', '')}</blockquote>`;
+        return `<blockquote style="border-left: 2px solid var(--text-primary); padding-left: 1.5rem; margin: 2rem 0; font-style: italic; color: var(--text-primary);">${block.replace('> ', '')}</blockquote>`;
       }
       if (block.startsWith('```')) {
         const code = block.replace(/```[a-z]*\n?/g, '').trim();

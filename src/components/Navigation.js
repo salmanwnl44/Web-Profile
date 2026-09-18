@@ -146,10 +146,14 @@ export function initNavigationHandlers() {
 
   const applyTheme = (isLight) => {
     if (isLight) {
+      document.documentElement.classList.remove('theme-dark');
+      document.documentElement.classList.add('theme-light');
       document.body.classList.remove('theme-dark');
       document.body.classList.add('theme-light');
       if (themeLabel) themeLabel.innerText = '[ THEME: WHITE ]';
     } else {
+      document.documentElement.classList.remove('theme-light');
+      document.documentElement.classList.add('theme-dark');
       document.body.classList.remove('theme-light');
       document.body.classList.add('theme-dark');
       if (themeLabel) themeLabel.innerText = '[ THEME: DARK ]';
