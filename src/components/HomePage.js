@@ -1,5 +1,4 @@
 import { PROFILE_DATA } from '../data/profile.js';
-import { renderTerminalMarkup } from './Terminal.js';
 
 export function renderHomePage() {
   const featuredProjects = PROFILE_DATA.projects.slice(0, 2);
@@ -63,40 +62,8 @@ export function renderHomePage() {
       </div>
     </div>
 
-    <!-- Identity & Interactive Terminal Section -->
-    <section class="view-section" style="padding-bottom: 2rem;">
-      <div class="container">
-        <div class="section-label">00 // IDENTITY & SYSTEM TELEMETRY</div>
-        <div class="identity-grid">
-          <!-- Portrait Frame -->
-          <div class="portrait-card">
-            <div class="portrait-meta-top">
-              <span>[ FIG. 01 // ARCHITECT_PORTRAIT ]</span>
-              <span>ID: SALMAN_01</span>
-            </div>
-            <div class="portrait-frame">
-              <img src="./assets/profile-color.jpg" alt="${PROFILE_DATA.name} - Software Architect & Creative Technologist" class="portrait-img" />
-              <span class="portrait-corner-tl">+</span>
-              <span class="portrait-corner-tr">+</span>
-              <span class="portrait-corner-bl">+</span>
-              <span class="portrait-corner-br">+</span>
-            </div>
-            <div class="portrait-meta-bottom">
-              <span>${PROFILE_DATA.name} // ARCHITECT</span>
-              <span>28.6139° N, 77.2090° E</span>
-            </div>
-          </div>
-
-          <!-- Interactive Terminal -->
-          <div class="terminal-wrapper">
-            ${renderTerminalMarkup()}
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Philosophy & Core Engineering Architecture -->
-    <section class="view-section" style="padding-top: 2rem;">
+    <section class="view-section">
       <div class="container">
         <div class="section-label">01 // CORE PHILOSOPHY</div>
         <div class="spec-grid">

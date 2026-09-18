@@ -1,4 +1,4 @@
-(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const a of document.querySelectorAll('link[rel="modulepreload"]'))n(a);new MutationObserver(a=>{for(const s of a)if(s.type==="childList")for(const o of s.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&n(o)}).observe(document,{childList:!0,subtree:!0});function t(a){const s={};return a.integrity&&(s.integrity=a.integrity),a.referrerPolicy&&(s.referrerPolicy=a.referrerPolicy),a.crossOrigin==="use-credentials"?s.credentials="include":a.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function n(a){if(a.ep)return;a.ep=!0;const s=t(a);fetch(a.href,s)}})();const r={name:"SALMAN",initials:"S_",title:"SOFTWARE ARCHITECT & CREATIVE ENGINEER",location:"UTC+05:30 [ONLINE]",status:"AVAILABLE FOR SELECT CONTRACTS",bio:"Engineering high-throughput distributed systems and sculpting radical, high-contrast digital experiences. Focused on hyper-minimal interfaces, zero unnecessary abstractions, and enduring software aesthetics.",metrics:[{label:"Years in Production",value:"08+"},{label:"Systems Engineered",value:"34"},{label:"Active Nodes Reached",value:"2.4M"},{label:"Design System Purity",value:"100%"}],philosophies:[{index:"01",title:"Radical Subtraction",description:"Perfection is achieved not when there is nothing more to add, but when there is nothing left to strip away. Every element must justify its screen presence."},{index:"02",title:"Sub-Millisecond Speed",description:"Latency is the ultimate anti-feature. We build systems that respond instantaneously, eliminating intermediate state loaders and synthetic delays."},{index:"03",title:"Deterministic Code",description:"Complex architectures fail in unpredictable modes. Resilient software relies on pure functions, strict typing, and fault-tolerant boundaries."}],projects:[{id:"aether-kernel",index:"01",title:"AETHER KERNEL",category:"SYSTEMS",tagline:"Low-latency streaming engine processing 1.2M events/sec with sub-millisecond p99 jitter.",year:"2026",client:"Autonomous Fleet Systems",stack:["Rust","Tokio","WebAssembly","ZeroMQ","ClickHouse"],metrics:"1.2M evt/sec • 0.8ms p99 • 0 alloc hot-path",githubUrl:"https://github.com/salmanwnl44/aether-kernel",liveUrl:"https://aether.example.org",deepDive:{problem:"Legacy ingestion pipelines choked under synchronized bursts of vehicle telemetry data, causing cascading head-of-line blocking and memory saturation during fleet surges.",solution:"Engineered a custom asynchronous memory ring-buffer in Rust with lockless ring dispatchers. Offloaded analytical indexing to specialized WebAssembly compute threads, eliminating memory churn and GC spikes completely.",architecture:`[Telematics Ingest] ──TCP/mTLS──► [Zero-Copy Ring Buffer]
+(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const a of document.querySelectorAll('link[rel="modulepreload"]'))n(a);new MutationObserver(a=>{for(const s of a)if(s.type==="childList")for(const r of s.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&n(r)}).observe(document,{childList:!0,subtree:!0});function t(a){const s={};return a.integrity&&(s.integrity=a.integrity),a.referrerPolicy&&(s.referrerPolicy=a.referrerPolicy),a.crossOrigin==="use-credentials"?s.credentials="include":a.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function n(a){if(a.ep)return;a.ep=!0;const s=t(a);fetch(a.href,s)}})();const o={name:"SALMAN",initials:"S_",location:"UTC+05:30 [ONLINE]",status:"AVAILABLE FOR SELECT CONTRACTS",metrics:[{label:"Years in Production",value:"08+"},{label:"Systems Engineered",value:"34"},{label:"Active Nodes Reached",value:"2.4M"},{label:"Design System Purity",value:"100%"}],philosophies:[{index:"01",title:"Radical Subtraction",description:"Perfection is achieved not when there is nothing more to add, but when there is nothing left to strip away. Every element must justify its screen presence."},{index:"02",title:"Sub-Millisecond Speed",description:"Latency is the ultimate anti-feature. We build systems that respond instantaneously, eliminating intermediate state loaders and synthetic delays."},{index:"03",title:"Deterministic Code",description:"Complex architectures fail in unpredictable modes. Resilient software relies on pure functions, strict typing, and fault-tolerant boundaries."}],projects:[{id:"aether-kernel",index:"01",title:"AETHER KERNEL",category:"SYSTEMS",tagline:"Low-latency streaming engine processing 1.2M events/sec with sub-millisecond p99 jitter.",year:"2026",client:"Autonomous Fleet Systems",stack:["Rust","Tokio","WebAssembly","ZeroMQ","ClickHouse"],metrics:"1.2M evt/sec • 0.8ms p99 • 0 alloc hot-path",githubUrl:"https://github.com/salmanwnl44/aether-kernel",liveUrl:"https://aether.example.org",deepDive:{problem:"Legacy ingestion pipelines choked under synchronized bursts of vehicle telemetry data, causing cascading head-of-line blocking and memory saturation during fleet surges.",solution:"Engineered a custom asynchronous memory ring-buffer in Rust with lockless ring dispatchers. Offloaded analytical indexing to specialized WebAssembly compute threads, eliminating memory churn and GC spikes completely.",architecture:`[Telematics Ingest] ──TCP/mTLS──► [Zero-Copy Ring Buffer]
                                          │
                    ┌─────────────────────┴─────────────────────┐
                    ▼                                           ▼
@@ -136,14 +136,14 @@ In reality, complexity is debt. Every component added is another failure domain,
 1. **Prefer Code That Can Be Deleted**: Design systems with clear, independent lifecycle boundaries.
 2. **Master the Fundamentals**: TCP, operating system processes, memory layouts, and data structures outlive every trendy frontend framework.
 3. **Aesthetics Matter**: Code formatting, variable clarity, and interface ergonomics reflect how deeply you care about the humans who will read your work tomorrow.
-      `}],contact:{email:"salman@example.com",github:"https://github.com/salmanwnl44",linkedin:"https://linkedin.com/in/salman",twitter:"https://x.com/salman",timezone:"UTC +05:30 (IST)",availability:"Available for Q3/Q4 2026 architectural advisories, creative tech, and senior engineering roles.",pgpKey:"4A9F 83B2 018C E829 55BF D210 932B C184 7A29 4F10"}};class ${constructor(e,t="view-container"){this.routes=e,this.container=document.getElementById(t),this.currentRoute=null,window.addEventListener("hashchange",()=>this.handleHashChange())}init(){this.handleHashChange()}handleHashChange(){const e=window.location.hash.slice(1),[t]=e.split("?"),n=t.toLowerCase().trim()||"home";this.navigate(n,!1)}navigate(e,t=!0){this.routes[e]||(e="home"),t&&(window.location.hash=e==="home"?"":`#${e}`),this.currentRoute=e,this.container&&(this.container.style.opacity="0",this.container.style.transform="translateY(6px)",this.container.style.transition="opacity 180ms ease, transform 180ms ease",setTimeout(()=>{const n=this.routes[e];typeof n=="function"&&(this.container.innerHTML=n()),window.scrollTo({top:0,behavior:"instant"}),this.container.style.opacity="1",this.container.style.transform="translateY(0)",window.dispatchEvent(new CustomEvent("routechange",{detail:{route:e}}))},140))}}const S="!<>-_\\/[]{}—=+*^?#01";function L(i,e=null,t=20){if(!i||i._isScrambling)return;i._isScrambling=!0;const n=e||i.dataset.originalText||i.innerText;i.dataset.originalText=n;let a=0;clearInterval(i._scrambleTimer),i._scrambleTimer=setInterval(()=>{i.innerText=n.split("").map((s,o)=>o<a?n[o]:s===" "?" ":S[Math.floor(Math.random()*S.length)]).join(""),a>=n.length&&(clearInterval(i._scrambleTimer),i.innerText=n,i._isScrambling=!1),a+=1.5},t)}class D{constructor(){this.ctx=null,this.enabled=!0}init(){if(!this.ctx&&typeof window<"u"){const e=window.AudioContext||window.webkitAudioContext;e&&(this.ctx=new e)}this.ctx&&this.ctx.state==="suspended"&&this.ctx.resume()}toggle(){return this.enabled=!this.enabled,this.enabled}playHover(){if(this.enabled)try{if(this.init(),!this.ctx)return;const e=this.ctx.createOscillator(),t=this.ctx.createGain();e.type="sine",e.frequency.setValueAtTime(820,this.ctx.currentTime),e.frequency.exponentialRampToValueAtTime(120,this.ctx.currentTime+.025),t.gain.setValueAtTime(.015,this.ctx.currentTime),t.gain.exponentialRampToValueAtTime(1e-4,this.ctx.currentTime+.025),e.connect(t),t.connect(this.ctx.destination),e.start(),e.stop(this.ctx.currentTime+.025)}catch{}}playClick(){if(this.enabled)try{if(this.init(),!this.ctx)return;const e=this.ctx.createOscillator(),t=this.ctx.createGain();e.type="triangle",e.frequency.setValueAtTime(1400,this.ctx.currentTime),e.frequency.exponentialRampToValueAtTime(60,this.ctx.currentTime+.04),t.gain.setValueAtTime(.04,this.ctx.currentTime),t.gain.exponentialRampToValueAtTime(1e-4,this.ctx.currentTime+.04),e.connect(t),t.connect(this.ctx.destination),e.start(),e.stop(this.ctx.currentTime+.04)}catch{}}playTransmit(){if(this.enabled)try{if(this.init(),!this.ctx)return;const e=this.ctx.currentTime;[440,880,1760].forEach((t,n)=>{const a=this.ctx.createOscillator(),s=this.ctx.createGain();a.type="square",a.frequency.setValueAtTime(t,e+n*.05),s.gain.setValueAtTime(.02,e+n*.05),s.gain.exponentialRampToValueAtTime(1e-4,e+n*.05+.04),a.connect(s),s.connect(this.ctx.destination),a.start(e+n*.05),a.stop(e+n*.05+.04)})}catch{}}}const p=new D;function P(i){if(!i)return;const e=i.getContext("2d");let t,n=!0;const a=()=>{i.width=Math.min(window.innerWidth,1920)/2,i.height=Math.min(window.innerHeight,1080)/2};a(),window.addEventListener("resize",a,{passive:!0});const s=()=>{if(!n)return;const o=i.width,c=i.height;if(o>0&&c>0){const l=e.createImageData(o,c),d=l.data,b=d.length;for(let u=0;u<b;u+=4){const T=Math.random()*255|0;d[u]=T,d[u+1]=T,d[u+2]=T,d[u+3]=18}e.putImageData(l,0,0)}t=requestAnimationFrame(s)};return s(),{destroy:()=>{n=!1,cancelAnimationFrame(t),window.removeEventListener("resize",a)}}}function A(i,e=2400){let t=document.querySelector(".toast-msg");t||(t=document.createElement("div"),t.className="toast-msg",document.body.appendChild(t)),t.innerText=i,t.classList.add("show"),clearTimeout(t._timeout),t._timeout=setTimeout(()=>{t.classList.remove("show")},e)}function B(){return`
+      `}],contact:{email:"salman@example.com",github:"https://github.com/salmanwnl44",linkedin:"https://linkedin.com/in/salman",twitter:"https://x.com/salman",timezone:"UTC +05:30 (IST)",availability:"Available for Q3/Q4 2026 architectural advisories, creative tech, and senior engineering roles.",pgpKey:"4A9F 83B2 018C E829 55BF D210 932B C184 7A29 4F10"}};class ${constructor(e,t="view-container"){this.routes=e,this.container=document.getElementById(t),this.currentRoute=null,window.addEventListener("hashchange",()=>this.handleHashChange())}init(){this.handleHashChange()}handleHashChange(){const e=window.location.hash.slice(1),[t]=e.split("?"),n=t.toLowerCase().trim()||"home";this.navigate(n,!1)}navigate(e,t=!0){this.routes[e]||(e="home"),t&&(window.location.hash=e==="home"?"":`#${e}`),this.currentRoute=e,this.container&&(this.container.style.opacity="0",this.container.style.transform="translateY(6px)",this.container.style.transition="opacity 180ms ease, transform 180ms ease",setTimeout(()=>{const n=this.routes[e];typeof n=="function"&&(this.container.innerHTML=n()),window.scrollTo({top:0,behavior:"instant"}),this.container.style.opacity="1",this.container.style.transform="translateY(0)",window.dispatchEvent(new CustomEvent("routechange",{detail:{route:e}}))},140))}}const w="!<>-_\\/[]{}—=+*^?#01";function R(i,e=null,t=20){if(!i||i._isScrambling)return;i._isScrambling=!0;const n=e||i.dataset.originalText||i.innerText;i.dataset.originalText=n;let a=0;clearInterval(i._scrambleTimer),i._scrambleTimer=setInterval(()=>{i.innerText=n.split("").map((s,r)=>r<a?n[r]:s===" "?" ":w[Math.floor(Math.random()*w.length)]).join(""),a>=n.length&&(clearInterval(i._scrambleTimer),i.innerText=n,i._isScrambling=!1),a+=1.5},t)}class D{constructor(){this.ctx=null,this.enabled=!0}init(){if(!this.ctx&&typeof window<"u"){const e=window.AudioContext||window.webkitAudioContext;e&&(this.ctx=new e)}this.ctx&&this.ctx.state==="suspended"&&this.ctx.resume()}toggle(){return this.enabled=!this.enabled,this.enabled}playHover(){if(this.enabled)try{if(this.init(),!this.ctx)return;const e=this.ctx.createOscillator(),t=this.ctx.createGain();e.type="sine",e.frequency.setValueAtTime(820,this.ctx.currentTime),e.frequency.exponentialRampToValueAtTime(120,this.ctx.currentTime+.025),t.gain.setValueAtTime(.015,this.ctx.currentTime),t.gain.exponentialRampToValueAtTime(1e-4,this.ctx.currentTime+.025),e.connect(t),t.connect(this.ctx.destination),e.start(),e.stop(this.ctx.currentTime+.025)}catch{}}playClick(){if(this.enabled)try{if(this.init(),!this.ctx)return;const e=this.ctx.createOscillator(),t=this.ctx.createGain();e.type="triangle",e.frequency.setValueAtTime(1400,this.ctx.currentTime),e.frequency.exponentialRampToValueAtTime(60,this.ctx.currentTime+.04),t.gain.setValueAtTime(.04,this.ctx.currentTime),t.gain.exponentialRampToValueAtTime(1e-4,this.ctx.currentTime+.04),e.connect(t),t.connect(this.ctx.destination),e.start(),e.stop(this.ctx.currentTime+.04)}catch{}}playTransmit(){if(this.enabled)try{if(this.init(),!this.ctx)return;const e=this.ctx.currentTime;[440,880,1760].forEach((t,n)=>{const a=this.ctx.createOscillator(),s=this.ctx.createGain();a.type="square",a.frequency.setValueAtTime(t,e+n*.05),s.gain.setValueAtTime(.02,e+n*.05),s.gain.exponentialRampToValueAtTime(1e-4,e+n*.05+.04),a.connect(s),s.connect(this.ctx.destination),a.start(e+n*.05),a.stop(e+n*.05+.04)})}catch{}}}const m=new D;function M(i){if(!i)return;const e=i.getContext("2d");let t,n=!0;const a=()=>{i.width=Math.min(window.innerWidth,1920)/2,i.height=Math.min(window.innerHeight,1080)/2};a(),window.addEventListener("resize",a,{passive:!0});const s=()=>{if(!n)return;const r=i.width,d=i.height;if(r>0&&d>0){const l=e.createImageData(r,d),p=l.data,E=p.length;for(let u=0;u<E;u+=4){const T=Math.random()*255|0;p[u]=T,p[u+1]=T,p[u+2]=T,p[u+3]=18}e.putImageData(l,0,0)}t=requestAnimationFrame(s)};return s(),{destroy:()=>{n=!1,cancelAnimationFrame(t),window.removeEventListener("resize",a)}}}function S(i,e=2400){let t=document.querySelector(".toast-msg");t||(t=document.createElement("div"),t.className="toast-msg",document.body.appendChild(t)),t.innerText=i,t.classList.add("show"),clearTimeout(t._timeout),t._timeout=setTimeout(()=>{t.classList.remove("show")},e)}function P(){return`
     <div class="container">
       <div class="header-inner">
         <!-- Brand / Identity -->
         <div class="brand-section">
-          <a href="#home" class="brand-logo glitch-hover" data-text="${r.name}">
-            <span>${r.name}</span>
-            <span class="brand-badge">${r.initials}</span>
+          <a href="#home" class="brand-logo glitch-hover" data-text="${o.name}">
+            <span>${o.name}</span>
+            <span class="brand-badge">${o.initials}</span>
           </a>
         </div>
 
@@ -202,7 +202,7 @@ In reality, complexity is debt. Every component added is another failure domain,
         </div>
       </div>
     </div>
-  `}function G(){return`
+  `}function B(){return`
     <div class="container">
       <div class="footer-top">
         <div class="footer-statement glitch-text" data-text="BUILDING THE SILENT WEB">
@@ -221,9 +221,9 @@ In reality, complexity is debt. Every component added is another failure domain,
           <div>
             <div class="footer-col-title">Networks</div>
             <ul class="footer-link-list">
-              <li><a href="${r.contact.github}" target="_blank" rel="noopener">GITHUB ↗</a></li>
-              <li><a href="${r.contact.linkedin}" target="_blank" rel="noopener">LINKEDIN ↗</a></li>
-              <li><a href="${r.contact.twitter}" target="_blank" rel="noopener">X / TWITTER ↗</a></li>
+              <li><a href="${o.contact.github}" target="_blank" rel="noopener">GITHUB ↗</a></li>
+              <li><a href="${o.contact.linkedin}" target="_blank" rel="noopener">LINKEDIN ↗</a></li>
+              <li><a href="${o.contact.twitter}" target="_blank" rel="noopener">X / TWITTER ↗</a></li>
             </ul>
           </div>
         </div>
@@ -231,7 +231,7 @@ In reality, complexity is debt. Every component added is another failure domain,
 
       <div class="footer-ticker">
         <div>
-          <span>© ${new Date().getFullYear()} ${r.name}. ALL RIGHTS RESERVED. EXAGGERATED MINIMALISM.</span>
+          <span>© ${new Date().getFullYear()} ${o.name}. ALL RIGHTS RESERVED. EXAGGERATED MINIMALISM.</span>
         </div>
         <div style="display: flex; align-items: center; gap: 1.5rem;">
           <span>COORDINATES: 28.6139° N, 77.2090° E</span>
@@ -239,67 +239,7 @@ In reality, complexity is debt. Every component added is another failure domain,
         </div>
       </div>
     </div>
-  `}function H(){const i=document.getElementById("hud-clock");if(i){const l=()=>{const b=new Date().toLocaleTimeString("en-US",{hour12:!1,timeZone:"Asia/Kolkata"});i.innerText=`${b} IST`};l(),setInterval(l,1e3)}const e=document.getElementById("sound-toggle-btn"),t=document.getElementById("sound-state-label");e&&t&&e.addEventListener("click",()=>{const l=p.toggle();t.innerText=l?"[ AUDIO: ON ]":"[ AUDIO: OFF ]",l&&p.playClick()});const n=document.getElementById("grain-toggle-btn"),a=document.getElementById("grain-state-label");n&&a&&n.addEventListener("click",()=>{document.body.classList.toggle("grain-enabled");const l=document.body.classList.contains("grain-enabled");a.innerText=l?"[ GRAIN: ON ]":"[ GRAIN: OFF ]",p.playClick()});const s=document.getElementById("mobile-nav-toggle"),o=document.getElementById("main-nav");s&&o&&(s.addEventListener("click",()=>{o.classList.toggle("open");const l=o.classList.contains("open");s.innerHTML=l?"<span>[ CLOSE ]</span>":"<span>[ MENU ]</span>",p.playClick()}),o.querySelectorAll(".nav-link").forEach(l=>{l.addEventListener("click",()=>{o.classList.remove("open"),s.innerHTML="<span>[ MENU ]</span>"})}));const c=document.getElementById("back-to-top");c&&c.addEventListener("click",()=>{window.scrollTo({top:0,behavior:"smooth"}),p.playClick()})}const U={whoami:`NAME:        ${r.name}
-ROLE:        ${r.title}
-STATUS:      ${r.status}
-LOCATION:    ${r.location}
-ACTIVE TIME: 8+ Years Production Engineering
-MOTTO:       "Radical Subtraction • Zero Unnecessary Abstractions"`,bio:`${r.bio}
-
-SYSTEM SPECIALIZATION:
-- Low-latency event streaming (Rust, Tokio, Wasm, ClickHouse)
-- Distributed consensus & storage meshes (Go, Raft, RocksDB)
-- Exaggerated minimalist digital monographs & WebGL shader tools`,stack:`[ CORE SYSTEMS ]
-  • Rust, Tokio, WebAssembly, Go, C++
-  • ClickHouse, PostgreSQL, RocksDB, Redis
-
-[ INTERFACE & CREATIVE ]
-  • Vanilla HTML5 / CSS3 / ES Modules
-  • WebGL, GLSL Shaders, Three.js, Web Audio API
-  • Strict Typography-Driven Design Systems
-
-[ PROTOCOLS & INFRA ]
-  • gRPC, ZeroMQ, TCP/mTLS, Docker, Linux eBPF`,philosophy:`// ENGINEERING AXIOMS
-01. RADICAL SUBTRACTION
-    Strip every ornament until only pure architecture remains.
-02. SUB-MILLISECOND SPEED
-    Latency is the ultimate anti-feature. Zero loading spinners.
-03. DETERMINISTIC BOUNDARIES
-    Resilient systems fail gracefully through pure functions.`};function j(){return`
-    <div class="terminal-container">
-      <div class="terminal-header-bar">
-        <div class="terminal-window-controls">
-          <span class="term-light red"></span>
-          <span class="term-light yellow"></span>
-          <span class="term-light green"></span>
-          <span class="term-title-text">salman@architect-node: ~ (zsh)</span>
-        </div>
-        <div class="terminal-actions">
-          <button class="term-btn" data-cmd="whoami">[ whoami ]</button>
-          <button class="term-btn" data-cmd="bio">[ bio ]</button>
-          <button class="term-btn" data-cmd="stack">[ stack ]</button>
-          <button class="term-btn" data-cmd="philosophy">[ philosophy ]</button>
-          <button class="term-btn" data-cmd="clear">[ clear ]</button>
-        </div>
-      </div>
-      <div class="terminal-body" id="terminal-body">
-        <div class="terminal-log" id="terminal-log">
-          <div class="term-line welcome-line">// INITIALIZING IDENTITY SUBSYSTEM...</div>
-          <div class="term-line welcome-line">// KERNEL READY. TYPE OR SELECT COMMAND BELOW:</div>
-        </div>
-        <div class="terminal-active-line">
-          <span class="term-prompt">guest@salman:~$</span>
-          <span class="term-command" id="terminal-command-input"></span>
-          <span class="term-cursor" id="term-cursor">▋</span>
-        </div>
-      </div>
-    </div>
-  `}function F(){const i=document.getElementById("terminal-log"),e=document.getElementById("terminal-command-input"),t=document.getElementById("terminal-body");if(!i||!e||!t)return;let n=!1;const a=async o=>{if(n)return;n=!0,e.innerText="";const c=o.trim();for(let l=0;l<c.length;l++)e.innerText+=c[l],await new Promise(d=>setTimeout(d,45));if(await new Promise(l=>setTimeout(l,120)),c==="clear")i.innerHTML='<div class="term-line welcome-line">// TERMINAL CLEARED.</div>';else{const l=U[c]||`Command not found: ${c}. Available: whoami, bio, stack, philosophy, clear`,d=document.createElement("div");d.className="term-entry",d.innerHTML=`
-        <div class="term-line term-history-prompt">
-          <span class="term-prompt">guest@salman:~$</span> <span class="term-history-cmd">${w(c)}</span>
-        </div>
-        <pre class="term-output">${w(l)}</pre>
-      `,i.appendChild(d)}e.innerText="",n=!1,t.scrollTop=t.scrollHeight};document.querySelectorAll(".term-btn").forEach(o=>{o.addEventListener("click",()=>{const c=o.dataset.cmd;c&&(p.playClick(),a(c))})}),setTimeout(()=>{a("whoami")},400)}function w(i){return i.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}function W(){const i=r.projects.slice(0,2),e=r.articles.slice(0,2);return`
+  `}function G(){const i=document.getElementById("hud-clock");if(i){const l=()=>{const E=new Date().toLocaleTimeString("en-US",{hour12:!1,timeZone:"Asia/Kolkata"});i.innerText=`${E} IST`};l(),setInterval(l,1e3)}const e=document.getElementById("sound-toggle-btn"),t=document.getElementById("sound-state-label");e&&t&&e.addEventListener("click",()=>{const l=m.toggle();t.innerText=l?"[ AUDIO: ON ]":"[ AUDIO: OFF ]",l&&m.playClick()});const n=document.getElementById("grain-toggle-btn"),a=document.getElementById("grain-state-label");n&&a&&n.addEventListener("click",()=>{document.body.classList.toggle("grain-enabled");const l=document.body.classList.contains("grain-enabled");a.innerText=l?"[ GRAIN: ON ]":"[ GRAIN: OFF ]",m.playClick()});const s=document.getElementById("mobile-nav-toggle"),r=document.getElementById("main-nav");s&&r&&(s.addEventListener("click",()=>{r.classList.toggle("open");const l=r.classList.contains("open");s.innerHTML=l?"<span>[ CLOSE ]</span>":"<span>[ MENU ]</span>",m.playClick()}),r.querySelectorAll(".nav-link").forEach(l=>{l.addEventListener("click",()=>{r.classList.remove("open"),s.innerHTML="<span>[ MENU ]</span>"})}));const d=document.getElementById("back-to-top");d&&d.addEventListener("click",()=>{window.scrollTo({top:0,behavior:"smooth"}),m.playClick()})}function H(){const i=o.projects.slice(0,2),e=o.articles.slice(0,2);return`
     <div class="view-section hero-wrapper">
       <!-- Atmospheric Background Photo: Blurred B&W -> Animated Living Color on Hover -->
       <div class="hero-bg-photo-wrap" aria-hidden="true">
@@ -311,8 +251,8 @@ SYSTEM SPECIALIZATION:
         <!-- Hero Metadata Bar -->
         <div class="hero-meta-bar">
           <div>// SPECIFICATION: PORTFOLIO PROFILE</div>
-          <div class="glitch-text" data-text="${r.status}">[ ${r.status} ]</div>
-          <div>LOC: ${r.location}</div>
+          <div class="glitch-text" data-text="${o.status}">[ ${o.status} ]</div>
+          <div>LOC: ${o.location}</div>
         </div>
 
         <!-- Exaggerated Hero Statement -->
@@ -325,7 +265,7 @@ SYSTEM SPECIALIZATION:
         <!-- Monograph Sub-Grid -->
         <div class="hero-sub-grid">
           <p class="hero-intro-text">
-            <strong>${r.name}</strong> is a software architect shaping zero-latency distributed engines and sculpting <strong>exaggerated minimalist</strong> digital surfaces. Eliminating cognitive clutter to let engineering purity speak.
+            <strong>${o.name}</strong> is a software architect shaping zero-latency distributed engines and sculpting <strong>exaggerated minimalist</strong> digital surfaces. Eliminating cognitive clutter to let engineering purity speak.
           </p>
           <div class="hero-actions">
             <a href="#projects" class="btn-monochrome glitch-hover" data-text="EXPLORE PROJECTS ↗">
@@ -344,7 +284,7 @@ SYSTEM SPECIALIZATION:
     <!-- Live Metrics Strip -->
     <div class="container">
       <div class="metrics-strip">
-        ${r.metrics.map(t=>`
+        ${o.metrics.map(t=>`
           <div class="metric-card">
             <div class="metric-label">// ${t.label}</div>
             <div class="metric-value glitch-text" data-text="${t.value}">${t.value}</div>
@@ -353,44 +293,12 @@ SYSTEM SPECIALIZATION:
       </div>
     </div>
 
-    <!-- Identity & Interactive Terminal Section -->
-    <section class="view-section" style="padding-bottom: 2rem;">
-      <div class="container">
-        <div class="section-label">00 // IDENTITY & SYSTEM TELEMETRY</div>
-        <div class="identity-grid">
-          <!-- Portrait Frame -->
-          <div class="portrait-card">
-            <div class="portrait-meta-top">
-              <span>[ FIG. 01 // ARCHITECT_PORTRAIT ]</span>
-              <span>ID: SALMAN_01</span>
-            </div>
-            <div class="portrait-frame">
-              <img src="./assets/profile-color.jpg" alt="${r.name} - Software Architect & Creative Technologist" class="portrait-img" />
-              <span class="portrait-corner-tl">+</span>
-              <span class="portrait-corner-tr">+</span>
-              <span class="portrait-corner-bl">+</span>
-              <span class="portrait-corner-br">+</span>
-            </div>
-            <div class="portrait-meta-bottom">
-              <span>${r.name} // ARCHITECT</span>
-              <span>28.6139° N, 77.2090° E</span>
-            </div>
-          </div>
-
-          <!-- Interactive Terminal -->
-          <div class="terminal-wrapper">
-            ${j()}
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Philosophy & Core Engineering Architecture -->
-    <section class="view-section" style="padding-top: 2rem;">
+    <section class="view-section">
       <div class="container">
         <div class="section-label">01 // CORE PHILOSOPHY</div>
         <div class="spec-grid">
-          ${r.philosophies.map(t=>`
+          ${o.philosophies.map(t=>`
             <div class="spec-column">
               <span class="spec-index">[ ${t.index} ]</span>
               <h2 class="spec-title glitch-hover" data-text="${t.title}">${t.title}</h2>
@@ -412,7 +320,7 @@ SYSTEM SPECIALIZATION:
             </h2>
           </div>
           <a href="#projects" class="btn-outline" style="padding: 0.75rem 1.25rem;">
-            <span>ALL PROJECTS [0${r.projects.length}] ↗</span>
+            <span>ALL PROJECTS [0${o.projects.length}] ↗</span>
           </a>
         </div>
 
@@ -447,7 +355,7 @@ SYSTEM SPECIALIZATION:
             </h2>
           </div>
           <a href="#blog" class="btn-outline" style="padding: 0.75rem 1.25rem;">
-            <span>ALL ARTICLES [0${r.articles.length}] ↗</span>
+            <span>ALL ARTICLES [0${o.articles.length}] ↗</span>
           </a>
         </div>
 
@@ -492,7 +400,7 @@ SYSTEM SPECIALIZATION:
         </div>
       </div>
     </section>
-  `}let f="ALL";function N(){const i=f==="ALL"?r.projects:r.projects.filter(e=>e.category===f);return`
+  `}let f="ALL";function L(){const i=f==="ALL"?o.projects:o.projects.filter(e=>e.category===f);return`
     <div class="view-section">
       <div class="container">
         <!-- Header -->
@@ -538,7 +446,7 @@ SYSTEM SPECIALIZATION:
         </div>
       </div>
     </div>
-  `}function k(i){document.querySelectorAll(".filter-btn").forEach(n=>{n.addEventListener("click",a=>{f=a.target.dataset.category;const s=document.getElementById("view-container");s&&(s.innerHTML=N(),k(i))})}),document.querySelectorAll(".project-item").forEach(n=>{n.addEventListener("click",()=>{const a=n.dataset.projectId,s=r.projects.find(o=>o.id===a);s&&typeof i=="function"&&i("project",s)})})}let y="ALL";function O(){const i=y==="ALL"?r.articles:r.articles.filter(e=>e.category===y);return`
+  `}function N(i){document.querySelectorAll(".filter-btn").forEach(n=>{n.addEventListener("click",a=>{f=a.target.dataset.category;const s=document.getElementById("view-container");s&&(s.innerHTML=L(),N(i))})}),document.querySelectorAll(".project-item").forEach(n=>{n.addEventListener("click",()=>{const a=n.dataset.projectId,s=o.projects.find(r=>r.id===a);s&&typeof i=="function"&&i("project",s)})})}let y="ALL";function k(){const i=y==="ALL"?o.articles:o.articles.filter(e=>e.category===y);return`
     <div class="view-section">
       <div class="container">
         <!-- Header -->
@@ -582,7 +490,7 @@ SYSTEM SPECIALIZATION:
         </div>
       </div>
     </div>
-  `}function M(i){document.querySelectorAll(".blog-filter-btn").forEach(n=>{n.addEventListener("click",a=>{y=a.target.dataset.category;const s=document.getElementById("view-container");s&&(s.innerHTML=O(),M(i))})}),document.querySelectorAll(".article-card").forEach(n=>{n.addEventListener("click",()=>{const a=n.dataset.articleId,s=r.articles.find(o=>o.id===a);s&&typeof i=="function"&&i("article",s)})})}function Y(){return`
+  `}function O(i){document.querySelectorAll(".blog-filter-btn").forEach(n=>{n.addEventListener("click",a=>{y=a.target.dataset.category;const s=document.getElementById("view-container");s&&(s.innerHTML=k(),O(i))})}),document.querySelectorAll(".article-card").forEach(n=>{n.addEventListener("click",()=>{const a=n.dataset.articleId,s=o.articles.find(r=>r.id===a);s&&typeof i=="function"&&i("article",s)})})}function U(){return`
     <div class="view-section">
       <div class="container">
         <div class="projects-header">
@@ -602,14 +510,14 @@ SYSTEM SPECIALIZATION:
               DIRECT DISPATCH
             </h2>
             <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.6;">
-              ${r.contact.availability}
+              ${o.contact.availability}
             </p>
 
             <table class="contact-meta-table">
               <tbody>
                 <tr>
                   <td>TIMEZONE</td>
-                  <td>${r.contact.timezone}</td>
+                  <td>${o.contact.timezone}</td>
                 </tr>
                 <tr>
                   <td>STATUS</td>
@@ -617,14 +525,14 @@ SYSTEM SPECIALIZATION:
                 </tr>
                 <tr>
                   <td>PGP FINGERPRINT</td>
-                  <td style="word-break: break-all; font-size: 0.75rem;">${r.contact.pgpKey}</td>
+                  <td style="word-break: break-all; font-size: 0.75rem;">${o.contact.pgpKey}</td>
                 </tr>
                 <tr>
                   <td>PRIMARY NETWORKS</td>
                   <td>
-                    <a href="${r.contact.github}" target="_blank" rel="noopener" style="color: #fff; text-decoration: underline; margin-right: 1rem;">GITHUB ↗</a>
-                    <a href="${r.contact.linkedin}" target="_blank" rel="noopener" style="color: #fff; text-decoration: underline; margin-right: 1rem;">LINKEDIN ↗</a>
-                    <a href="${r.contact.twitter}" target="_blank" rel="noopener" style="color: #fff; text-decoration: underline;">X / TWITTER ↗</a>
+                    <a href="${o.contact.github}" target="_blank" rel="noopener" style="color: #fff; text-decoration: underline; margin-right: 1rem;">GITHUB ↗</a>
+                    <a href="${o.contact.linkedin}" target="_blank" rel="noopener" style="color: #fff; text-decoration: underline; margin-right: 1rem;">LINKEDIN ↗</a>
+                    <a href="${o.contact.twitter}" target="_blank" rel="noopener" style="color: #fff; text-decoration: underline;">X / TWITTER ↗</a>
                   </td>
                 </tr>
               </tbody>
@@ -634,7 +542,7 @@ SYSTEM SPECIALIZATION:
             <div class="direct-email-box">
               <div>
                 <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); margin-bottom: 0.3rem;">ELECTRONIC MAIL</div>
-                <div style="font-family: var(--font-mono); font-size: 0.95rem; font-weight: 600; color: #fff;">${r.contact.email}</div>
+                <div style="font-family: var(--font-mono); font-size: 0.95rem; font-weight: 600; color: #fff;">${o.contact.email}</div>
               </div>
               <button id="copy-email-btn" class="btn-outline copy-email-btn" style="padding: 0.6rem 1rem;">
                 <span>[ COPY EMAIL ]</span>
@@ -701,7 +609,7 @@ SYSTEM SPECIALIZATION:
                 <p style="margin-bottom: 1rem;">
                   <strong>PACKET HASH:</strong> <span id="receipt-hash">0x8F9B2A7E41C</span><br />
                   <strong>SENDER:</strong> <span id="receipt-sender"></span><br />
-                  <strong>ROUTING TARGET:</strong> ${r.contact.email}
+                  <strong>ROUTING TARGET:</strong> ${o.contact.email}
                 </p>
                 <p style="margin-bottom: 1.5rem;">
                   Payload verified and logged to secure buffer. You will receive an encrypted response within 24 hours.
@@ -715,7 +623,7 @@ SYSTEM SPECIALIZATION:
         </div>
       </div>
     </div>
-  `}function z(){const i=document.getElementById("copy-email-btn");i&&i.addEventListener("click",()=>{navigator.clipboard.writeText(r.contact.email).then(()=>{A("EMAIL COPIED TO BUFFER"),p.playClick()})});const e=document.getElementById("transmission-form"),t=document.getElementById("transmission-receipt"),n=document.getElementById("reset-form-btn");e&&t&&(e.addEventListener("submit",a=>{a.preventDefault();const s=document.getElementById("contact-name").value,o=document.getElementById("contact-email").value;p.playTransmit();const c=new Date().toISOString(),l="0x"+Math.random().toString(16).substr(2,10).toUpperCase();document.getElementById("receipt-timestamp").innerText=c,document.getElementById("receipt-hash").innerText=l,document.getElementById("receipt-sender").innerText=`${s} <${o}>`,e.style.display="none",t.style.display="block",A("TRANSMISSION DELIVERED")}),n&&n.addEventListener("click",()=>{e.reset(),t.style.display="none",e.style.display="flex",p.playClick()}))}const x=document.getElementById("site-header"),C=document.getElementById("site-footer"),m=document.getElementById("modal-container"),h=document.getElementById("modal-content"),R=document.getElementById("modal-close-btn"),q=document.getElementById("grain-canvas"),g=document.getElementById("custom-cursor"),I=document.getElementById("custom-cursor-dot");P(q);x&&(x.innerHTML=B());C&&(C.innerHTML=G());H();if(g&&I){let i=window.innerWidth/2,e=window.innerHeight/2,t=i,n=e;window.addEventListener("mousemove",o=>{i=o.clientX,e=o.clientY,I.style.left=`${i}px`,I.style.top=`${e}px`},{passive:!0});const a=()=>{t+=(i-t)*.22,n+=(e-n)*.22,g.style.left=`${t}px`,g.style.top=`${n}px`,requestAnimationFrame(a)};a();const s=()=>{document.querySelectorAll("a, button, .project-item, .article-card, input, textarea, select").forEach(c=>{c.addEventListener("mouseenter",()=>{g.classList.add("hovering")}),c.addEventListener("mouseleave",()=>{g.classList.remove("hovering")})})};window.addEventListener("routechange",()=>{setTimeout(s,50)}),s()}function V(){const i=document.querySelector(".brand-logo");i&&!i._boundScramble&&(i._boundScramble=!0,i.addEventListener("mouseenter",()=>{const e=i.getAttribute("data-text")||"SALMAN",t=i.querySelector("span");t&&L(t,e,25)}))}function v(i,e){if(!m||!h)return;p.playClick(),m.style.display="flex";const t=document.querySelector(".modal-dialog");if(t&&(t.scrollTop=0),setTimeout(()=>m.classList.add("open"),10),document.body.style.overflow="hidden",i==="project")h.innerHTML=`
+  `}function j(){const i=document.getElementById("copy-email-btn");i&&i.addEventListener("click",()=>{navigator.clipboard.writeText(o.contact.email).then(()=>{S("EMAIL COPIED TO BUFFER"),m.playClick()})});const e=document.getElementById("transmission-form"),t=document.getElementById("transmission-receipt"),n=document.getElementById("reset-form-btn");e&&t&&(e.addEventListener("submit",a=>{a.preventDefault();const s=document.getElementById("contact-name").value,r=document.getElementById("contact-email").value;m.playTransmit();const d=new Date().toISOString(),l="0x"+Math.random().toString(16).substr(2,10).toUpperCase();document.getElementById("receipt-timestamp").innerText=d,document.getElementById("receipt-hash").innerText=l,document.getElementById("receipt-sender").innerText=`${s} <${r}>`,e.style.display="none",t.style.display="block",S("TRANSMISSION DELIVERED")}),n&&n.addEventListener("click",()=>{e.reset(),t.style.display="none",e.style.display="flex",m.playClick()}))}const x=document.getElementById("site-header"),A=document.getElementById("site-footer"),c=document.getElementById("modal-container"),h=document.getElementById("modal-content"),C=document.getElementById("modal-close-btn"),F=document.getElementById("grain-canvas"),g=document.getElementById("custom-cursor"),I=document.getElementById("custom-cursor-dot");M(F);x&&(x.innerHTML=P());A&&(A.innerHTML=B());G();if(g&&I){let i=window.innerWidth/2,e=window.innerHeight/2,t=i,n=e;window.addEventListener("mousemove",r=>{i=r.clientX,e=r.clientY,I.style.left=`${i}px`,I.style.top=`${e}px`},{passive:!0});const a=()=>{t+=(i-t)*.22,n+=(e-n)*.22,g.style.left=`${t}px`,g.style.top=`${n}px`,requestAnimationFrame(a)};a();const s=()=>{document.querySelectorAll("a, button, .project-item, .article-card, input, textarea, select").forEach(d=>{d.addEventListener("mouseenter",()=>{g.classList.add("hovering")}),d.addEventListener("mouseleave",()=>{g.classList.remove("hovering")})})};window.addEventListener("routechange",()=>{setTimeout(s,50)}),s()}function W(){const i=document.querySelector(".brand-logo");i&&!i._boundScramble&&(i._boundScramble=!0,i.addEventListener("mouseenter",()=>{const e=i.getAttribute("data-text")||"SALMAN",t=i.querySelector("span");t&&R(t,e,25)}))}function v(i,e){if(!c||!h)return;m.playClick(),c.style.display="flex";const t=document.querySelector(".modal-dialog");if(t&&(t.scrollTop=0),setTimeout(()=>c.classList.add("open"),10),document.body.style.overflow="hidden",i==="project")h.innerHTML=`
       <div>
         <div class="section-label">PROJECT SPEC // ${e.index}</div>
         <h2 class="modal-project-title glitch-text" data-text="${e.title}">${e.title}</h2>
@@ -778,7 +686,7 @@ SYSTEM SPECIALIZATION:
         </div>
 
         <div class="modal-prose">
-          ${_(e.content)}
+          ${z(e.content)}
         </div>
 
         <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center;">
@@ -786,7 +694,7 @@ SYSTEM SPECIALIZATION:
           <button id="modal-reader-close" class="btn-outline">[ RETURN TO JOURNAL ]</button>
         </div>
       </article>
-    `;const a=document.getElementById("modal-reader-close");a&&a.addEventListener("click",E)}const n=h.querySelector(".glitch-text");n&&L(n,n.dataset.text,25)}function E(){m&&(m.classList.remove("open"),document.body.style.overflow="",setTimeout(()=>{m.style.display="none",h&&(h.innerHTML="")},250))}R&&R.addEventListener("click",E);m&&m.addEventListener("click",i=>{i.target===m&&E()});window.addEventListener("keydown",i=>{i.key==="Escape"&&m&&m.classList.contains("open")&&E()});function _(i){return i.split(`
+    `;const a=document.getElementById("modal-reader-close");a&&a.addEventListener("click",b)}const n=h.querySelector(".glitch-text");n&&R(n,n.dataset.text,25)}function b(){c&&(c.classList.remove("open"),document.body.style.overflow="",setTimeout(()=>{c.style.display="none",h&&(h.innerHTML="")},250))}C&&C.addEventListener("click",b);c&&c.addEventListener("click",i=>{i.target===c&&b()});window.addEventListener("keydown",i=>{i.key==="Escape"&&c&&c.classList.contains("open")&&b()});function z(i){return i.split(`
 
-`).map(e=>{if(e=e.trim(),!e)return"";if(e.startsWith("### "))return`<h3 class="modal-section-h3">${e.replace("### ","")}</h3>`;if(e.startsWith("> "))return`<blockquote style="border-left: 2px solid #ffffff; padding-left: 1.5rem; margin: 2rem 0; font-style: italic; color: #ffffff;">${e.replace("> ","")}</blockquote>`;if(e.startsWith("```")){const t=e.replace(/```[a-z]*\n?/g,"").trim();return`<pre class="code-block-minimal"><code>${K(t)}</code></pre>`}return e.startsWith("1. ")||e.startsWith("- ")?`<ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.8;">${e.split(`
-`).map(n=>`<li>${n.replace(/^(\d+\.|\-)\s+/,"")}</li>`).join("")}</ul>`:`<p>${e}</p>`}).join("")}function K(i){return i.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}const J={home:()=>W(),projects:()=>N(),blog:()=>O(),contact:()=>Y()},X=new $(J);window.addEventListener("routechange",i=>{const e=i.detail.route;if(document.querySelectorAll(".nav-link").forEach(t=>{t.dataset.route===e?t.classList.add("active"):t.classList.remove("active")}),e==="home"){F();const t=document.querySelector(".hero-wrapper");t&&(t.addEventListener("mouseenter",()=>t.classList.add("hero-hovered")),t.addEventListener("mouseleave",()=>t.classList.remove("hero-hovered"))),document.querySelectorAll(".project-item").forEach(n=>{n.addEventListener("click",()=>{const a=n.dataset.projectId,s=r.projects.find(o=>o.id===a);s&&v("project",s)})}),document.querySelectorAll(".article-card").forEach(n=>{n.addEventListener("click",()=>{const a=n.dataset.articleId,s=r.articles.find(o=>o.id===a);s&&v("article",s)})})}else e==="projects"?k((t,n)=>v(t,n)):e==="blog"?M((t,n)=>v(t,n)):e==="contact"&&z();V()});X.init();
+`).map(e=>{if(e=e.trim(),!e)return"";if(e.startsWith("### "))return`<h3 class="modal-section-h3">${e.replace("### ","")}</h3>`;if(e.startsWith("> "))return`<blockquote style="border-left: 2px solid #ffffff; padding-left: 1.5rem; margin: 2rem 0; font-style: italic; color: #ffffff;">${e.replace("> ","")}</blockquote>`;if(e.startsWith("```")){const t=e.replace(/```[a-z]*\n?/g,"").trim();return`<pre class="code-block-minimal"><code>${q(t)}</code></pre>`}return e.startsWith("1. ")||e.startsWith("- ")?`<ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.8;">${e.split(`
+`).map(n=>`<li>${n.replace(/^(\d+\.|\-)\s+/,"")}</li>`).join("")}</ul>`:`<p>${e}</p>`}).join("")}function q(i){return i.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}const Y={home:()=>H(),projects:()=>L(),blog:()=>k(),contact:()=>U()},V=new $(Y);window.addEventListener("routechange",i=>{const e=i.detail.route;if(document.querySelectorAll(".nav-link").forEach(t=>{t.dataset.route===e?t.classList.add("active"):t.classList.remove("active")}),e==="home"){const t=document.querySelector(".hero-wrapper");t&&(t.addEventListener("mouseenter",()=>t.classList.add("hero-hovered")),t.addEventListener("mouseleave",()=>t.classList.remove("hero-hovered"))),document.querySelectorAll(".project-item").forEach(n=>{n.addEventListener("click",()=>{const a=n.dataset.projectId,s=o.projects.find(r=>r.id===a);s&&v("project",s)})}),document.querySelectorAll(".article-card").forEach(n=>{n.addEventListener("click",()=>{const a=n.dataset.articleId,s=o.articles.find(r=>r.id===a);s&&v("article",s)})})}else e==="projects"?N((t,n)=>v(t,n)):e==="blog"?O((t,n)=>v(t,n)):e==="contact"&&j();W()});V.init();

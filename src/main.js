@@ -6,7 +6,6 @@ import { renderHomePage } from './components/HomePage.js';
 import { renderProjectsPage, initProjectsHandlers } from './components/ProjectsPage.js';
 import { renderBlogPage, initBlogHandlers } from './components/BlogPage.js';
 import { renderContactPage, initContactHandlers } from './components/ContactPage.js';
-import { initTerminal } from './components/Terminal.js';
 
 // DOM Elements
 const headerEl = document.getElementById('site-header');
@@ -265,8 +264,6 @@ window.addEventListener('routechange', (e) => {
 
   // Attach page-specific interactions
   if (route === 'home') {
-    initTerminal();
-
     // Hero background photo hover animation
     const heroWrap = document.querySelector('.hero-wrapper');
     if (heroWrap) {
