@@ -3,23 +3,6 @@
    Strictly Black & White, Razor-Thin Slices, Digital Displacements
    ========================================================================== */
 
-/* Film Grain Overlay Canvas */
-.grain-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: var(--z-grain);
-  opacity: 0.055;
-  transition: opacity var(--transition-smooth);
-}
-
-body:not(.grain-enabled) .grain-overlay {
-  opacity: 0;
-}
-
 /* Monochromatic Slice Glitch Effect on Text */
 .glitch-text {
   position: relative;

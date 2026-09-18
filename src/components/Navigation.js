@@ -54,13 +54,10 @@ export function renderHeader() {
           </ul>
         </nav>
 
-        <!-- System Controls: Sound, Grain & Contrast -->
+        <!-- System Controls: Sound & Navigation -->
         <div class="header-controls">
           <button id="sound-toggle-btn" class="control-btn" title="Toggle Mechanical Audio FX">
             <span id="sound-state-label">[ AUDIO: ON ]</span>
-          </button>
-          <button id="grain-toggle-btn" class="control-btn" title="Toggle Digital Grain">
-            <span id="grain-state-label">[ GRAIN: ON ]</span>
           </button>
           <button id="mobile-nav-toggle" class="mobile-toggle" aria-label="Toggle menu">
             <span>[ MENU ]</span>
@@ -139,17 +136,6 @@ export function initNavigationHandlers() {
     });
   }
 
-  // Grain Toggle
-  const grainBtn = document.getElementById('grain-toggle-btn');
-  const grainLabel = document.getElementById('grain-state-label');
-  if (grainBtn && grainLabel) {
-    grainBtn.addEventListener('click', () => {
-      document.body.classList.toggle('grain-enabled');
-      const isGrain = document.body.classList.contains('grain-enabled');
-      grainLabel.innerText = isGrain ? '[ GRAIN: ON ]' : '[ GRAIN: OFF ]';
-      sound.playClick();
-    });
-  }
 
   // Mobile Menu Toggle
   const mobileBtn = document.getElementById('mobile-nav-toggle');

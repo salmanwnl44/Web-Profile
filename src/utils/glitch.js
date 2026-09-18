@@ -1,6 +1,6 @@
 /**
  * GLITCH & AUDIO-VISUAL UTILITIES
- * Black & White Text Scrambler, Canvas Grain, and Web Audio Micro-Clicks
+ * Black & White Text Scrambler and Web Audio Micro-Clicks
  */
 
 const GLITCH_GLYPHS = '!<>-_\\/[]{}—=+*^?#01';
@@ -148,56 +148,6 @@ class SoundEngine {
 
 export const sound = new SoundEngine();
 
-/**
- * Animated High-Performance Film Grain Canvas
- */
-export function initFilmGrain(canvas) {
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  let animationFrameId;
-  let isRunning = true;
-
-  const resize = () => {
-    canvas.width = Math.min(window.innerWidth, 1920) / 2; // Render at half res for crisp performance
-    canvas.height = Math.min(window.innerHeight, 1080) / 2;
-  };
-
-  resize();
-  window.addEventListener('resize', resize, { passive: true });
-
-  const renderGrain = () => {
-    if (!isRunning) return;
-    const w = canvas.width;
-    const h = canvas.height;
-    if (w > 0 && h > 0) {
-      const imgData = ctx.createImageData(w, h);
-      const data = imgData.data;
-      const len = data.length;
-
-      for (let i = 0; i < len; i += 4) {
-        const val = (Math.random() * 255) | 0;
-        data[i] = val;
-        data[i + 1] = val;
-        data[i + 2] = val;
-        data[i + 3] = 18; // Subtle grain density
-      }
-
-      ctx.putImageData(imgData, 0, 0);
-    }
-    // Throttle to every other frame for smooth cinematic 30-60fps
-    animationFrameId = requestAnimationFrame(renderGrain);
-  };
-
-  renderGrain();
-
-  return {
-    destroy: () => {
-      isRunning = false;
-      cancelAnimationFrame(animationFrameId);
-      window.removeEventListener('resize', resize);
-    }
-  };
-}
 
 /**
  * Toast Notification Utility

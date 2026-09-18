@@ -1,6 +1,6 @@
 import { PROFILE_DATA } from './data/profile.js';
 import { Router } from './utils/router.js';
-import { scrambleText, sound, initFilmGrain, showToast } from './utils/glitch.js';
+import { scrambleText, sound, showToast } from './utils/glitch.js';
 import { renderHeader, renderFooter, initNavigationHandlers } from './components/Navigation.js';
 import { renderHomePage } from './components/HomePage.js';
 import { renderProjectsPage, initProjectsHandlers } from './components/ProjectsPage.js';
@@ -13,12 +13,8 @@ const footerEl = document.getElementById('site-footer');
 const modalBackdrop = document.getElementById('modal-container');
 const modalBody = document.getElementById('modal-content');
 const modalCloseBtn = document.getElementById('modal-close-btn');
-const grainCanvas = document.getElementById('grain-canvas');
 const cursor = document.getElementById('custom-cursor');
 const cursorDot = document.getElementById('custom-cursor-dot');
-
-// Initialize Film Grain Canvas
-initFilmGrain(grainCanvas);
 
 // Render Static Shell (Header & Footer)
 if (headerEl) headerEl.innerHTML = renderHeader();
